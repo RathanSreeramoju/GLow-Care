@@ -11,18 +11,19 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E32625">
+        android:background="#B3AFAF">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:shadowColor="#E85F18E3"
                 android:layout_marginTop="10dp"
+                android:shadowColor="#E85F18E3"
                 android:text="Dove Body Wash            $4"
                 android:textColor="#222020" />
 
@@ -57,8 +58,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:shadowColor="#E85F18E3"
                 android:layout_marginTop="10dp"
+                android:shadowColor="#E85F18E3"
                 android:text="Mythic Oil Shampoo      $5"
                 android:textColor="#222020" />
 
@@ -74,8 +75,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:shadowColor="#E85F18E3"
                 android:layout_marginTop="10dp"
+                android:shadowColor="#E85F18E3"
                 android:text="Loreal Men care       $9"
                 android:textColor="#222020" />
 
@@ -87,7 +88,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:src="@drawable/img5" />
-
 
 
         </LinearLayout>
