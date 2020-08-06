@@ -22,12 +22,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // Variables assignment
-        button1 = (Button)findViewById(R.id.button2);
+        button1 = (Button)findViewById(R.id.button);
         edit1 = (EditText)findViewById(R.id.editText);
         edit2 = (EditText)findViewById(R.id.editText2);
         button2 = (Button)findViewById(R.id.button2);
-        text1 = (TextView)findViewById(R.id.textView1);
-
+        text1 = (TextView)findViewById(R.id.textView3);
+        text2 = (TextView)findViewById(R.id.textView5) ;
         text2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
