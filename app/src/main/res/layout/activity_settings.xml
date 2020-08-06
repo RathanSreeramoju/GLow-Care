@@ -8,11 +8,11 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="121dp"
-        android:layout_height="50dp"
+        android:layout_width="260dp"
+        android:layout_height="62dp"
         android:text="Signout"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="404dp" />
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="363dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="409dp"
@@ -22,20 +22,20 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="hint"
-        android:text="Items you bought "
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="90dp" />
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="255dp"
+        android:layout_height="73dp"
+        android:text="Items you previously bought"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="135dp" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="128dp"
-        android:layout_height="150dp"
-        app:srcCompat="@drawable/facecream"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="169dp" />
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="251dp"
+        android:layout_height="67dp"
+        android:text="Contact us "
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="249dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
