@@ -2,5 +2,5 @@
     <string name="app_name">Glow&amp;Care</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Profile</string>
-    <string name="title_notifications"></string>
+    <string name="title_notifications">Cart</string>
 </resources>
