@@ -51,7 +51,7 @@
         android:textColor="#151414" />
 
     <Button
-        android:id="@+id/cart2"
+        android:id="@+id/cart9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="130sp"
