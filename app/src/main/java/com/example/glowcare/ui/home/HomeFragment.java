@@ -21,7 +21,6 @@ import com.example.glowcare.R;
 public class HomeFragment extends Fragment{
 
     View view;
-    ImageView imageView;
     TextView text1 ,text2;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
