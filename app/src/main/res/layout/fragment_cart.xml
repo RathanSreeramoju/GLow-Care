@@ -4,103 +4,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B3AFAF"
     tools:context=".ui.cart.CartFragment">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName5"
-        android:layout_width="62dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="320dp"
-        android:layout_marginRight="320dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Cart"
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3AFAF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="219dp"
         android:layout_height="218dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:src="@drawable/facecream"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName7"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName6"
-        android:layout_width="147dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="19.99"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName7"
-        android:layout_width="160dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Olay Face-cream"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName8"
-        android:layout_width="123dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="*2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName9"
-        android:layout_width="176dp"
-        android:layout_height="42dp"
         android:layout_marginTop="44dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="sub-total"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        tools:layout_editor_absoluteX="5dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName10"
-        android:layout_width="204dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="68dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="39.98"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName9"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+        android:src="@drawable/facecream"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        tools:layout_editor_absoluteX="8dp" />
 
     <Button
         android:id="@+id/order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:layout_marginBottom="244dp"
         android:text="Buy Now"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="90dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="28dp"
+        android:text="Cart"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="91dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:text="19.99$"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="107dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:text="Olay"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="32dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
+        android:text="*2"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="158dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Total"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="130dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="36dp"
+        android:text="39.98"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

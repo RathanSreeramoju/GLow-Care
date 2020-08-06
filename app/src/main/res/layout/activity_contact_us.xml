@@ -14,6 +14,7 @@
         android:layout_marginLeft="28dp"
         android:layout_marginTop="92dp"
         android:text="Phone Number"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,6 +37,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginTop="40dp"
         android:text="Email"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 

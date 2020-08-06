@@ -24,10 +24,12 @@ private Context context;
 
         view = inflater.inflate(R.layout.fragment_cart, container, false);
         button1 = (Button) view.findViewById(R.id.order);
+        context = getContext();
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "Order Placed", Toast.LENGTH_SHORT).show();
+
             }
         });
 
