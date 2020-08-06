@@ -15,7 +15,9 @@
         android:id="@+id/navigation_cart"
         android:icon="@drawable/ic_baseline_shopping_cart_24"
         android:title="@string/title_notifications" />
-    <item android:title="Settings"
+    <item
+        android:id="@+id/navigation_settings"
+        android:title="Settings"
         android:icon="@drawable/ic_baseline_settings_24"
         />
 
