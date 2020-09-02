@@ -59,7 +59,8 @@ dependencies {
     //Material Edittext
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
 
-
+//Material Dialog
+    implementation 'com.github.javiersantos:MaterialStyledDialogs:2.1'
 
 
 }

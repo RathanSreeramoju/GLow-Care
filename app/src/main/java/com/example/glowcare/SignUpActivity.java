@@ -29,10 +29,10 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        signup = findViewById(R.id.SaveChanges);
+        signup = findViewById(R.id.Signup);
         signinhere = findViewById(R.id.signin);
-        emailid = findViewById(R.id.editText);
-        password = findViewById(R.id.editText2);
+        emailid = findViewById(R.id.Email);
+        password = findViewById(R.id.Password);
         Retrofit retrofit = RetrofitClient.getApiClient();
         loginapi = retrofit.create(Node.class);
         signup.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +48,7 @@ public class SignUpActivity extends AppCompatActivity {
         signinhere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

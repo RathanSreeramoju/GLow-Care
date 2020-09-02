@@ -3,6 +3,7 @@ package com.example.glowcare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.MediaRouteButton;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -22,7 +23,7 @@ import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 
 public class LoginActivity extends AppCompatActivity {
-    Button signin;
+    Button login;
     TextView signuphere;
     EditText emailid,password;
     Node loginapi;
@@ -38,22 +39,16 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        signin = findViewById(R.id.button2);
-        signuphere = findViewById(R.id.textView1);
-        emailid = findViewById(R.id.editText);
-        password = findViewById(R.id.editText2);
+        login = findViewById(R.id.login);
+        signuphere = findViewById(R.id.sign);
+        emailid = findViewById(R.id.email);
+        password = findViewById(R.id.password);
 
         Retrofit retrofit = RetrofitClient.getApiClient();
         loginapi = retrofit.create(Node.class);
-        signin.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(SigninActivity.this,HomeActivity.class);
-//                startActivity(intent);
-                if (emailid.getText().toString().contains("temp")&& password.getText().toString().contains("temp")){
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
-                }
                 loginuser(emailid.getText().toString(),password.getText().toString());
             }
         });
@@ -70,8 +65,8 @@ public class LoginActivity extends AppCompatActivity {
      *
      * @param emailid as passed from the ui
      * @param password as passed from the ui
-     * loginuser method checks whether the details are availbel in the database. If the details are available
-     *                 it lands in the home page
+     * loginuser method checks whether the details are available in the database. If the details are available
+     *                 it goes to in the home page
      */
     private void loginuser(String emailid, String password) {
 
@@ -81,9 +76,9 @@ public class LoginActivity extends AppCompatActivity {
                 .subscribe(new Consumer<String>() {
                     @Override
                     public void accept(String s) throws Exception {
-                        Log.v("api text","dilip"+s);
+                        Log.v("api text","rathan"+s);
                         if (s.contains("Valid user")){
-                            Intent intent = new Intent(LoginActivity.this,HomeFragment.class);
+                            Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                             startActivity(intent);}
                         else
                             Toast.makeText(LoginActivity.this,"login failure",Toast.LENGTH_LONG).show();
