@@ -38,7 +38,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.android.support:multidex:1.0.3'
     //to get Circular image
     implementation 'de.hdodenhof:circleimageview:3.1.0'
@@ -61,6 +61,9 @@ dependencies {
 
 //Material Dialog
     implementation 'com.github.javiersantos:MaterialStyledDialogs:2.1'
+
+    //UI firestore
+    implementation 'com.firebaseui:firebase-ui-firestore:6.3.0'
 
 
 }
