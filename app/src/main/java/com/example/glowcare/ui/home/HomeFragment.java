@@ -51,7 +51,6 @@ public class HomeFragment extends Fragment{
         FirestoreRecyclerOptions<HomeModel> options = new FirestoreRecyclerOptions.Builder<HomeModel>()
                 .setQuery(query,HomeModel.class)
                 .build();
-<<<<<<< HEAD
 
         notebookRef.addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
@@ -63,8 +62,7 @@ public class HomeFragment extends Fragment{
             }
         });
 
-=======
->>>>>>> cf72d5328f84b1a20ab1a8c489c40cc334f803a6
+
         adapter = new HomeAdapter(options);
         recyclerView = view.findViewById(R.id.firestore_list);
         recyclerView.setHasFixedSize(true);
@@ -86,10 +84,7 @@ public class HomeFragment extends Fragment{
     public void onStart() {
         super.onStart();
         adapter.startListening();
-<<<<<<< HEAD
 
-=======
->>>>>>> cf72d5328f84b1a20ab1a8c489c40cc334f803a6
     }
 
 
