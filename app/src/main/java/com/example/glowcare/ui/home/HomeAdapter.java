@@ -5,6 +5,7 @@ import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,8 +15,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.glowcare.R;
+import com.example.glowcare.ui.cart.CartAdapter;
+import com.example.glowcare.ui.cart.CartModel;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
 
 import com.example.glowcare.R;
@@ -25,59 +29,60 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
 import java.util.ArrayList;
 
-public class HomeAdapter extends FirestoreRecyclerAdapter<HomeModel,HomeAdapter.HomeViewHolder> {
+public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
-    ArrayList<HomeModel> products = new ArrayList<>();
-    private Context context;
+    ArrayList<HomeModel> homeModel;
+    ArrayList<CartModel> cartModelList;
+    Context context;
+    CartModel model;
+    String input;
+    FirebaseFirestore db;
 
-    //private String imageurl = "https://images.unsplash.com/photo-1494548162494-384bba4ab999?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80";
-
-    /**
-     * Create a new RecyclerView adapter that listens to a Firestore Query.  See {@link
-     * FirestoreRecyclerOptions} for configuration options.
-     *
-     * @param options
-     */
-    public HomeAdapter(@NonNull FirestoreRecyclerOptions<HomeModel> options) {
-        super(options);
+    public HomeAdapter( ArrayList<HomeModel> homeModel, Context context) {
+        this.homeModel = homeModel;
+        this.context = context;
     }
 
-    @Override
-    protected void onBindViewHolder(@NonNull HomeViewHolder holder, int position, @NonNull HomeModel model) {
-        holder.listName.setText(model.getName());
-
-        holder.listPrice.setText(model.getPrice()+"$");
-      //  Picasso.get().load("URL of image").into(imageView);
-        Picasso.get().load(model.getImageurl())
-                .fit()
-                .centerCrop()
-                .into(holder.image);
-
-        holder.listPrice.setText(model.getPrice()+"");
-        // Glide.with(context).load(model.getImageurl()).into(holder.image);
-
-    }
 
     @NonNull
     @Override
-    public HomeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view1 = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_items_home,parent,false);
-
-        return new HomeViewHolder(view1);
+    public HomeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view;
+        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_items_home, parent, false);
+        return new HomeAdapter.ViewHolder(view);
     }
 
-    public class HomeViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView listName,listPrice;
-        private ImageView image;
-        public HomeViewHolder(@NonNull View itemView) {
+
+    @Override
+    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+        holder.itemName.setText(homeModel.get(position).getName());
+        holder.itemPrice.setText("$ " +homeModel.get(position).getPrice());
+        Picasso.get().load(homeModel.get(position).getImageurl()).into(holder.itemImage);
+    }
+
+
+    @Override
+    public int getItemCount() {
+        return homeModel.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        ImageView itemImage;
+        TextView itemName, itemPrice;
+        Button addtocart;
+
+
+        public ViewHolder(@NonNull final View itemView) {
             super(itemView);
-            listName = itemView.findViewById(R. id.list_name);
-            listPrice = itemView.findViewById(R.id.list_price);
+            addtocart =itemView.findViewById(R.id.addtocart);
+            itemName = itemView.findViewById(R.id.name1);
+            itemPrice = itemView.findViewById(R.id.price1);
+            itemImage = itemView.findViewById(R.id.image1);
+            itemView.setTag(this);
 
-            image = itemView.findViewById(R.id.imageView8);
 
-            // image = itemView.findViewById(R.id.imageView8);
 
         }
     }
