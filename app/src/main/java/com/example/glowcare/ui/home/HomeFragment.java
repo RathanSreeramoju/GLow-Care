@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.example.glowcare.LoginActivity;
 import com.example.glowcare.ProductActivity1;
 import com.example.glowcare.ProductActivity2;
 import com.example.glowcare.ProductActivity3;
@@ -30,6 +32,7 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -77,6 +80,28 @@ public class HomeFragment extends Fragment{
                     }
                     adapter = new HomeAdapter(products,getActivity().getApplicationContext());
                     recyclerView.setAdapter(adapter);
+
+                    adapter.setOnItemClickListener(new HomeAdapter.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(int position) {
+
+                        }
+                        @Override
+                        public void onButtonClick(int position, Button imageView) {
+                                db.collection("Cart").add(products.get(position)).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<DocumentReference> task) {
+                                        if(task.isSuccessful()){
+                                            Toast.makeText(getActivity().getApplicationContext(),"Added!!",Toast.LENGTH_LONG).show();
+                                        }
+                                        else {
+                                            Toast.makeText(getActivity().getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                                        }
+
+                                    }
+                                });
+                        }
+                    });
 
 
                 }

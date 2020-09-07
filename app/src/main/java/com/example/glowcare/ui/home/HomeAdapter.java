@@ -33,6 +33,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
     ArrayList<HomeModel> homeModel;
     ArrayList<CartModel> cartModelList;
+    OnItemClickListener listener;
     Context context;
     CartModel model;
     String input;
@@ -43,6 +44,14 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
         this.context = context;
     }
 
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+        void onButtonClick(int position, Button imageView);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
+    }
 
     @NonNull
     @Override
@@ -82,8 +91,15 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             itemImage = itemView.findViewById(R.id.image1);
             itemView.setTag(this);
 
-
-
+            addtocart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int pos = getAdapterPosition();
+                    if (pos != RecyclerView.NO_POSITION) {
+                        listener.onButtonClick(pos, addtocart);
+                    }
+                }
+            });
         }
     }
 }
