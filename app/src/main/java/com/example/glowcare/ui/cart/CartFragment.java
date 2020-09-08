@@ -66,7 +66,7 @@ public class CartFragment extends Fragment {
                     adapter.setOnItemClickListener(new CartAdapter.OnDeleteListener() {
                         @Override
                         public void onDeleteClick(int position) {
-                            db.collection("CartList").document(cartList.get(position).getId()).delete();
+                            db.collection("Cart").document(cartList.get(position).getId()).delete();
                         }
                     });
 

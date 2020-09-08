@@ -31,12 +31,14 @@ import java.util.ArrayList;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
+    private static View.OnClickListener clickListener;
     ArrayList<HomeModel> homeModel;
     ArrayList<CartModel> cartModelList;
     OnItemClickListener listener;
     Context context;
     CartModel model;
     String input;
+
     FirebaseFirestore db;
 
     public HomeAdapter( ArrayList<HomeModel> homeModel, Context context) {
@@ -76,6 +78,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
         return homeModel.size();
     }
 
+
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView itemImage;
@@ -90,6 +93,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             itemPrice = itemView.findViewById(R.id.price1);
             itemImage = itemView.findViewById(R.id.image1);
             itemView.setTag(this);
+
 
             addtocart.setOnClickListener(new View.OnClickListener() {
                 @Override
