@@ -60,7 +60,7 @@ public class ProfileFragment extends Fragment {
 
 
     }
-<<<<<<< HEAD
+
 
 
     @Override
@@ -102,54 +102,10 @@ public class ProfileFragment extends Fragment {
 
     }
 
-    public void generateView()
-    {
-        Picasso.get().load(profile.getImageUrl()).into(pimageView);
-        txt_name.setText("Name :"+profile.getName());
-        txt_email.setText("Email :"+profile.getEmail());
-
-=======
-
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        pimageView = view.findViewById(R.id.profile_image);
-        txt_name = view.findViewById(R.id.p_name);
-        txt_email = view.findViewById(R.id.p_email);
-        //database connection
-        db = FirebaseFirestore.getInstance();
-
-        db.collection("Profile").get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-
-                        if(task.isSuccessful()){
-
-                            for(DocumentSnapshot snapshot:task.getResult()){
-
-                                profile = new UserProfile(snapshot.getId(),
-                                        snapshot.getString("Name"),
-                                        snapshot.getString("Email"),
-                                        snapshot.getString("imageUrl")
-                                );
-
-                            }
-// picasso library to load profile image
-                            Picasso.get().load(profile.getImageUrl()).into(pimageView);
-                            txt_name.setText("Name :"+profile.getName());
-                            txt_email.setText("Email :"+profile.getEmail());
-                        }
-                    }
-                });
 
 
 
-
-
-    }
+    
 // this method used to display profile image, name and email
     public void generateView()
     {
@@ -157,6 +113,6 @@ public class ProfileFragment extends Fragment {
         txt_name.setText("Name :"+profile.getName());
         txt_email.setText("Email :"+profile.getEmail());
 
->>>>>>> 7a302ea325593dcf727471c0f673e7c53defeeec
+
     }
 }
