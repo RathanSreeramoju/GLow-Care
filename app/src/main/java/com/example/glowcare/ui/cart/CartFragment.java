@@ -24,6 +24,9 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
+/**
+ * CardFragment is a screen to display on the same screen.
+ */
 public class CartFragment extends Fragment {
     private FirebaseFirestore db;
     private CartAdapter adapter;
@@ -32,6 +35,14 @@ public class CartFragment extends Fragment {
     TextView buyNow;
     CartModel cart;
     private Context context;
+
+    /**
+     * To inflate the current screen on the screen.
+     * @param inflater :shows the current fragment.
+     * @param container : ViewGroup element.
+     * @param savedInstanceState :Bundle object.
+     * @return :Returns the current screen.
+     */
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -39,6 +50,11 @@ public class CartFragment extends Fragment {
 
     }
 
+    /**
+     * onViewCreated method calls through to the superclass implementation.
+     * @param view : View element.
+     * @param savedInstanceState : Bundle element.
+     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
