@@ -29,6 +29,9 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
 import java.util.ArrayList;
 
+/**
+ *Home Adapter includes
+ */
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
     private static View.OnClickListener clickListener;

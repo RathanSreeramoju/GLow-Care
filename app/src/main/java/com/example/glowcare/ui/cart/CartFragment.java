@@ -48,6 +48,11 @@ public class CartFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         cartList = new ArrayList<>();
         buyNow = view.findViewById(R.id.btnBuyNow);
+        buyNow.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v)  {
+                Toast.makeText(getActivity().getApplicationContext(), "Order Placed" , Toast.LENGTH_SHORT ).show();
+            }
+        });
 
         db.collection("Cart").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
