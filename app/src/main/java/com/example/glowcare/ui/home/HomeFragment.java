@@ -27,6 +27,10 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
+/**
+ * Home Fragment consists the list of products through a recycler view
+ * firestore is used as database to get the list of products
+ */
 public class HomeFragment extends Fragment{
 
     private FirebaseFirestore db;
@@ -36,6 +40,14 @@ public class HomeFragment extends Fragment{
     HomeModel product;
     String description;
     private Context context;
+
+    /**
+     * The view is created with the layout fragment_home
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -43,6 +55,12 @@ public class HomeFragment extends Fragment{
 
     }
 
+    /**
+     * The code which has to be done after creation of view
+     * We use adapter to get the data from firestore database
+     * @param view
+     * @param savedInstanceState
+     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

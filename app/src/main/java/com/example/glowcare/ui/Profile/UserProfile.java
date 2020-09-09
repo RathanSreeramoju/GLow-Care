@@ -1,40 +1,57 @@
 package com.example.glowcare.ui.Profile;
 
-public class UserProfile {
-    private String Firstname;
-    private String Lastname;
-    private String Address;
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class UserProfile  {
+    private String id;
+    private String Name;
     private String Email;
+    private String imageUrl;
 
-    public UserProfile(){
 
+
+
+    public String getId() {
+        return id;
     }
 
-    public UserProfile(String Firstname, String Lastname, String Address,String Email) {
-        this.Firstname = Firstname;
-        this.Lastname = Lastname;
-        this.Address = Address;
-        this.Email=Email;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getFirstname()
-    {
-        return Firstname;
+    public String getName() {
+        return Name;
     }
 
-    public String getLastname()
-    {
-        return Lastname;
+    public void setName(String name) {
+        Name = name;
     }
 
-    public String getAddress()
-    {
-        return Address;
-    }
-    public String getEmail()
-    {
+    public String getEmail() {
         return Email;
     }
 
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public UserProfile() {
+    }
+
+    public UserProfile(String id, String name, String email, String imageUrl) {
+        this.id = id;
+        Name = name;
+        Email = email;
+        this.imageUrl = imageUrl;
+    }
 }
 

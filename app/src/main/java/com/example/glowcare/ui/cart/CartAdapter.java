@@ -16,6 +16,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+/**
+ *
+ */
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     ArrayList<CartModel> cartModelList;
     OnDeleteListener listener;
@@ -23,6 +26,11 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     String input;
     FirebaseFirestore db;
 
+    /**
+     *
+     * @param cartModelList
+     * @param context
+     */
     public CartAdapter( ArrayList<CartModel> cartModelList, Context context) {
         this.cartModelList = cartModelList;
         this.context = context;
