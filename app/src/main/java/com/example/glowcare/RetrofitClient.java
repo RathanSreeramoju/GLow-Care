@@ -3,6 +3,10 @@ import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
+
+/**
+ * Getting Retrofit get apiclient( node api)
+ */
 public class RetrofitClient {
     public static final String BASE_URL = "http://192.168.2.75:5000";
     public static Retrofit retrofit = null;

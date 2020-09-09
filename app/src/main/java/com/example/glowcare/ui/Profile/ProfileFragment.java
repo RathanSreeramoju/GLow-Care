@@ -105,7 +105,7 @@ public class ProfileFragment extends Fragment {
 
 
 
-    
+
 // this method used to display profile image, name and email
     public void generateView()
     {

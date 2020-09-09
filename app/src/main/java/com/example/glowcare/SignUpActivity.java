@@ -19,12 +19,20 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 
+/**
+ * Signup Activity registers the user using mysql database
+ */
 public class SignUpActivity extends AppCompatActivity {
     Button signup;
     TextView signinhere;
     EditText emailid,password;
     Node loginapi;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
+
+    /**
+     * Registers the user with email and password storing it in mysql database
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -9,9 +9,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.glowcare.ui.home.HomeFragment;
 
+/**
+ * Items class shows the items previously bought
+ */
 public class Items extends AppCompatActivity {
     Button button;
 
+    /**
+     * sets the layout items_previously_bought
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

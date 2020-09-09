@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+/**
+ * Calss for internet  connectivity
+ */
 public class ConnectivityReceiver extends BroadcastReceiver {
 
 

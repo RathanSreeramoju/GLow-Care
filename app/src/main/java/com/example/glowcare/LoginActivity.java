@@ -22,6 +22,9 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 
+/**
+ * Login activity has the code to authenticate the user using mysql database
+ */
 public class LoginActivity extends AppCompatActivity {
     Button login;
     TextView signuphere;

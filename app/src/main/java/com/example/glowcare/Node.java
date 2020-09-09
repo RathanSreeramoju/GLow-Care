@@ -5,6 +5,9 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
+/**
+ * Interface using node Api to register and login
+ */
 public interface Node {
     @POST("register")
     @FormUrlEncoded

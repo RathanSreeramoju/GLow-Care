@@ -2,6 +2,9 @@ package com.example.glowcare.Handler;
 
 import android.app.Application;
 
+/**
+ * Class for virtual instance
+ */
 public class MyApp extends Application {
     private static MyApp mInstance;
 

@@ -9,9 +9,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.glowcare.ui.home.HomeFragment;
 
+/**
+ * Contact class shows the contact details
+ */
 public class Contact extends AppCompatActivity {
     Button button;
 
+    /**
+     * sets the layout contact_us
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

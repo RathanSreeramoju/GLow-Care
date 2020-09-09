@@ -17,6 +17,9 @@ import android.widget.TextView;
 import com.example.glowcare.Handler.ConnectivityReceiver;
 import com.example.glowcare.Handler.MyApp;
 
+/**
+ * Splash Screen Activity loads the app icon with animation
+ */
 public class SplashScreenActivity extends AppCompatActivity{
 
     private ImageView home;
@@ -38,7 +41,9 @@ public class SplashScreenActivity extends AppCompatActivity{
 
     }
 
-
+    /**
+     * Animation with top, bottom and center position 
+     */
     private void init() {
 
         home = findViewById(R.id.imageView4);
