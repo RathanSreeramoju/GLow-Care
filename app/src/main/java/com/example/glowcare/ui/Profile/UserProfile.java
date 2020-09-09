@@ -1,39 +1,83 @@
 package com.example.glowcare.ui.Profile;
 
 public class UserProfile {
-    private String Firstname;
-    private String Lastname;
-    private String Address;
+    private String id;
+    private String Name;
     private String Email;
+    private String imageUrl;
 
     public UserProfile(){
 
     }
 
-    public UserProfile(String Firstname, String Lastname, String Address,String Email) {
-        this.Firstname = Firstname;
-        this.Lastname = Lastname;
-        this.Address = Address;
-        this.Email=Email;
+    public UserProfile(String id, String name, String email, String imageUrl)
+    {
+        this.id = id;
+        Name = name;
+        Email = email;
+        this.imageUrl = imageUrl;
     }
 
-    public String getFirstname()
-    {
-        return Firstname;
+    /**
+     * retrieve id value
+     * @return string data type
+     */
+    public String getId() {
+        return id;
     }
 
-    public String getLastname()
-    {
-        return Lastname;
+    /**
+     * set id value
+     * @param id
+     */
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getAddress()
-    {
-        return Address;
+    /**
+     * retreive value of name
+     * @return string data type
+     */
+    public String getName() {
+        return Name;
     }
-    public String getEmail()
-    {
+    /**
+     * set value of name
+     * @param
+     */
+    public void setName(String name) {
+        Name = name;
+    }
+    /**
+     * retreive value of email
+     * @return string data type
+     */
+    public String getEmail() {
         return Email;
+    }
+    /**
+     * set value of email
+     * @param
+     */
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+    /**
+     * retreive image
+     * @return string data type
+     */
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    /**
+     * set image
+     * @param imageUrl
+     */
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
 }
