@@ -42,7 +42,7 @@ public class SplashScreenActivity extends AppCompatActivity{
     }
 
     /**
-     * Animation with top, bottom and center position 
+     * Animation with top, bottom and center position
      */
     private void init() {
 

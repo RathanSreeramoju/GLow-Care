@@ -30,6 +30,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+/**
+ * Profile class shows the profile of the user logged in
+ */
 public class ProfileFragment extends Fragment {
 
 
@@ -38,12 +41,18 @@ public class ProfileFragment extends Fragment {
     UserProfile  profile;
     private FirebaseFirestore db;
 
+    /**
+     * Constructor for profile fragment
+     */
     public ProfileFragment() {
         // Required empty public constructor
     }
 
 
-
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +61,13 @@ public class ProfileFragment extends Fragment {
 
     }
 
+    /**
+     * inflates the layout fragment_profile
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -62,7 +78,11 @@ public class ProfileFragment extends Fragment {
     }
 
 
-
+    /**
+     * Getting the profile after after creating the view
+     * @param view
+     * @param savedInstanceState
+     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

@@ -1,15 +1,28 @@
 package com.example.glowcare.ui.Profile;
 
+/**
+ * Model class for User profile
+ */
 public class UserProfile {
     private String id;
     private String Name;
     private String Email;
     private String imageUrl;
 
+    /**
+     * Constructor with no parameters
+     */
     public UserProfile(){
 
     }
 
+    /**
+     * Constructor with id, name, email and imageurl as parameters
+     * @param id
+     * @param name
+     * @param email
+     * @param imageUrl
+     */
     public UserProfile(String id, String name, String email, String imageUrl)
     {
         this.id = id;
