@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "173360157016",
+    "firebase_url": "https://glow-e42ed.firebaseio.com",
+    "project_id": "glow-e42ed",
+    "storage_bucket": "glow-e42ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173360157016:android:9874c9f873e489057b952d",
+        "android_client_info": {
+          "package_name": "com.example.glowcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "173360157016-rtc6vm9qt4n4nuiroetkor0moaafmoc7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkGEQOEkuxPDivKYO6N2-gpZ3j55kJ0Ls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "173360157016-rtc6vm9qt4n4nuiroetkor0moaafmoc7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
